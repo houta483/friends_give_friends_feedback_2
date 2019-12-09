@@ -53,6 +53,14 @@ class FeedbacksController < ApplicationController
     end
   end
 
+  def destroy_row_from_user
+    @feedback = Feedback.find(params.fetch("id_to_remove"))
+
+    @feedback.destroy
+
+    redirect_to("/users/#{@feedback.user_id}", notice: "Feedback deleted successfully.")
+  end
+
   def destroy_row
     @feedback = Feedback.find(params.fetch("id_to_remove"))
 
