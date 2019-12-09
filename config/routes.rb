@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root :to => "feedbacks#index"
   # Routes for the Feedback resource:
 
   # CREATE
