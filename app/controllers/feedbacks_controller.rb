@@ -10,7 +10,7 @@ class FeedbacksController < ApplicationController
   end
 
   def index
-    @feedbacks = Feedback.all
+    @feedbacks = Feedback.page(params[:page]).per(10)
 
     render("feedback_templates/index.html.erb")
   end
