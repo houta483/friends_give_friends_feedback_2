@@ -13,17 +13,21 @@
 
       <!-- Edit link feedback start -->
       <div class="col">
-        <a href="/feedbacks/<%= @feedback.id %>/edit" class="btn btn-block btn-outline-secondary">
-          Edit feedback
-        </a>
+        <% if current_user == @feedback.user %>
+          <a href="/feedbacks/<%= @feedback.id %>/edit" class="btn btn-block btn-sm btn-outline-secondary">
+            Edit feedback
+          </a>
+        <% end %>
       </div>
       <!-- Edit link feedback end -->
 
       <!-- Delete link feedback start -->
       <div class="col">
-        <a href="/delete_feedback/<%= @feedback.id %>" class="btn btn-block btn-outline-secondary">
-          Delete feedback
-        </a>
+        <% if current_user == @feedback.user %>
+          <a href="/delete_feedback/<%= @feedback.id %>" class="btn btn-block btn-sm btn-outline-secondary">
+            Delete feedback
+          </a>
+        <% end %>
       </div>
       <!-- Delete link feedback end -->
     </div>
