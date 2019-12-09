@@ -58,7 +58,11 @@
 
         <!-- Display feedback.user_id start -->
         <td>
-          <%= feedback.user.email %>
+          <% if feedback.user.present? %>
+            <a href="/users/<%= feedback.user.id %>">
+              <%= feedback.user.email %>
+            </a>
+          <% end %>
         </td>
         <!-- Display feedback.user_id end -->
 
