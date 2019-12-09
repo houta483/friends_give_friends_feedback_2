@@ -11,7 +11,6 @@
         </a>
       </div>
 
-      <!-- Edit link feedback start -->
       <div class="col">
         <% if current_user == @feedback.user %>
           <a href="/feedbacks/<%= @feedback.id %>/edit" class="btn btn-block btn-sm btn-outline-secondary">
@@ -19,9 +18,7 @@
           </a>
         <% end %>
       </div>
-      <!-- Edit link feedback end -->
 
-      <!-- Delete link feedback start -->
       <div class="col">
         <% if current_user == @feedback.user %>
           <a href="/delete_feedback/<%= @feedback.id %>" class="btn btn-block btn-sm btn-outline-secondary">
@@ -29,14 +26,12 @@
           </a>
         <% end %>
       </div>
-      <!-- Delete link feedback end -->
     </div>
 
     <dl>
       <dt>
         User
       </dt>
-      <!-- Display user_id start -->
       <dd>
         <% if @feedback.user.present? %>
           <a href="/users/<%= @feedback.user_id %>">
@@ -44,37 +39,28 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display user_id end -->
 
       <dt>
         Comments
       </dt>
-      <!-- Display comments start -->
       <dd>
         <%= @feedback.comments %>
       </dd>
-      <!-- Display comments end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@feedback.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@feedback.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
-<!-- Show Page Customization end -->

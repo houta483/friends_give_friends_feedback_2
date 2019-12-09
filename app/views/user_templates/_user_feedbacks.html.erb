@@ -10,11 +10,9 @@
   <ul class="list-group list-group-flush">
     <% @user.feedbacks.each do |feedback| %>
       <li class="list-group-item d-flex align-items-center justify-content-between">
-        <!-- Show link start -->
         <a href="/feedbacks/<%= feedback.id %>">
           <%= feedback.user_id %>
         </a>
-        <!-- Show link end -->
 
       </li>
     <% end %>

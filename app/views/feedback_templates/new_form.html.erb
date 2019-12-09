@@ -5,27 +5,17 @@
 
 <hr>
 
-<!-- Form feedback start -->
 <form action="/create_feedback" method="post">
-<!-- Form feedback end -->
 
-  <!-- Label and input for user_id start -->
-  <!-- Input for "user_id" start -->
   <input type="hidden" name="user_id" value="<%= current_user.id %>">
-  <!-- Input for "user_id" end -->
-  <!-- Label and input for user_id end -->
 
-  <!-- Label and input for comments start -->
   <div class="form-group">
     <label for="comments">
       Comments
     </label>
 
-    <!-- Input for comments start -->
     <input type="text" id="comments" name="comments" class="form-control">
-    <!-- Input for comments end -->
   </div>
-  <!-- Label and input for comments end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Create feedback
