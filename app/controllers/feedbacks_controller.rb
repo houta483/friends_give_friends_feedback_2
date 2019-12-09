@@ -41,7 +41,7 @@ class FeedbacksController < ApplicationController
   def update_row
     @feedback = Feedback.find(params.fetch("id_to_modify"))
 
-    @feedback.user_id = params.fetch("user_id")
+    
     @feedback.comments = params.fetch("comments")
 
     if @feedback.valid?
